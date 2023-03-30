@@ -23,6 +23,7 @@ Product.belongsToMany(Tag, {
   },
   as: "tags",
   onDelete: "CASCADE",
+  foreignKey: "product_id",
 });
 
 // Tags belongToMany Products (through ProductTag)
@@ -33,6 +34,7 @@ Tag.belongsToMany(Product, {
   },
   as: "products",
   onDelete: "CASCADE",
+  foreignKey: "tag_id",
 });
 
 module.exports = {
